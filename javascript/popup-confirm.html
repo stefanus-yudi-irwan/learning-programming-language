@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Popup Confirm</title>
+    </head>
+    <body>
+        <script>
+            const masuk = confirm("Anda yakin mau masuk?");
+            if (masuk) {
+                const name = prompt("Siapa Nama Anda?");
+                alert(`Hello ${name}`);
+            } else {
+                alert("Bye bye");
+            }
+        </script>
+    </body>
+</html>
