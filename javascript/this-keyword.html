@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>This Keyword</title>
+    </head>
+    <body>
+        <script>
+            console.info(this); //Window
+
+            function sample() {
+                console.info(this); //Window
+
+                function inner() {
+                    console.info(this); //Window
+                }
+
+                inner();
+            }
+
+            sample();
+
+            const person = {
+                name: "Yudi",
+                sayHello: function (name) {
+                    // this = person
+                    console.info(`Hi ${name}, my name is ${this.name}`)
+                }
+            }
+
+            person.sayHello("Budi");
+            person.sayHello("Joko");
+        </script>
+    </body>
+</html>

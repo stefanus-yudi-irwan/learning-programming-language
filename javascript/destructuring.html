@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Destructuring</title>
+    </head>
+    <body>
+        <script>
+            // Scope 1
+            {            
+                const names = ["Stefanus", "Yudi", "Irwan"];
+                const firstName = names[0];
+                const middleName = names[1];
+                const lastName = names[2];
+
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            // Scope 2
+            {
+                // Destructuring Array
+                const names = ["Stefanus", "Yudi", "Irwan", "Budi", "Handoko"];
+                const [firstName, middleName, lastName, ...others] = names;
+
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+                console.info(others);
+            }
+
+            // Scope 3
+            {
+                const person = {
+                    firstName: "Stefanus",
+                    lastName: "Yudi",
+                    address: {
+                        street: "StreetA",
+                        city: "CityA",
+                        country: "CountryA"
+                    },
+                    hobby: "Game",
+                    channel: "My Channel"
+                };
+
+                const {firstName, lastName, address, ...others} = person;
+                console.info(firstName);
+                console.info(lastName);
+                console.info(address);
+                console.info(others);
+            }
+
+            // Scope 4
+            {
+                const person = {
+                    firstName: "Stefanus",
+                    lastName: "Yudi",
+                    address: {
+                        street: "StreetA",
+                        city: "CityA",
+                        country: "CountryA"
+                    },
+                    hobby: "Game",
+                    channel: "My Channel"
+                };
+
+                const {firstName, lastName, address: {country, city, street}, ...others} = person;
+                console.info(firstName);
+                console.info(lastName);
+                console.info(country);
+                console.info(city);
+                console.info(street);
+                console.info(others);
+                //console.info(address); // undefined
+            }
+
+            // Scope 5
+            {
+                function displayPerson({firstName, middleName, lastName}) {
+                    console.info(firstName);
+                    console.info(middleName);
+                    console.info(lastName);
+                }
+
+                const person = {
+                    firstName: "Stefanus",
+                    middleName: "Yudi",
+                    lastName: "Irwan"
+                };
+
+                displayPerson(person);
+            }
+
+            // Scope 6
+            {
+                function sum([first, second]) {
+                    return first + second;
+                }
+
+                console.info(sum([10,100]));
+                console.info(sum([1,2]));
+            }
+
+            // Scope 7
+            {
+                const names = ["Stefanus", "Yudi"];
+                const [firstName, middleName = "Budi", lastName = "Irwan"] = names;
+
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            // Scope 8
+            {
+                const person = {
+                    firstName: "Stefanus",
+                    lastName: "Irwan",
+                }
+
+                const {firstName, middleName = "Yudi", lastName = "default"} = person;
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            // Scope 9
+            {
+                const person = {
+                    firstName: "Stefanus",
+                    lastName: "Irwan",
+                }
+
+                const {firstName: namaDepan,
+                    middleName: namaTengah = "Yudi",
+                    lastName: namaBelakang = "default"} = person;
+
+                //console.info(firstName); error undefined
+                console.info(namaDepan);
+                console.info(namaTengah);
+                console.info(namaBelakang);
+            }
+
+        </script>
+    </body>
+</html>
