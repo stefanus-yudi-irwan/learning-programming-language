@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Function As Value</title>
+    </head>
+    <body>
+        <script>
+            function sayHello(name) {
+                console.info(`Hello ${name}`);
+            }
+
+            let say = sayHello;
+            sayHello("Eko");
+            say("Budi");
+
+            function giveMeName(callback) {
+                callback("Eko");
+            }
+
+            giveMeName(sayHello);
+            giveMeName(say);
+        </script>
+    </body>
+</html>
