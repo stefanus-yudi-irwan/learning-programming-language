@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>For In</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Eko",
+                middleName: "Kurniawan",
+                lastName: "Khannedy"
+            };
+
+            for (const property in person) {
+                document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
+            }
+        </script>
+    </body>
+</html>
