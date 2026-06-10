@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Regexp</title>
+    </head>
+    <body>
+        <script>
+        {
+            const regex1 = /yudi/
+            const regex2 = new RegExp("yudi")
+            const regex3 = new RegExp(/yudi/)
+        }
+        {
+            const name = "Stefanus Yudi Irwan";
+            const regex = /Yudi/
+
+            let result = regex.exec(name);
+            console.info(result);
+            console.info(regex.exec("tidak ada"));
+
+            let test = regex.test(name);
+            console.info(test);
+            console.info(regex.test("tidak ada"));
+        }
+        {
+            const name = "stefanus yudi\nsTefanus Yudi\Stefanus Irwan"
+            const regex1 = /yudi/g
+            const regex2 = /^Stefanus/igm
+
+            let result;
+            while ((result = regex1.exec(name)) !== null) {
+                console.info(result);
+            }
+
+            while ((result = regex2.exec(name)) !== null) {
+                console.info(result);
+            }
+        }
+        {
+            const regex = /ek[aiueo]/ig;
+            const text = "eko ado eki eka ejo emi elo eke";
+
+            while ((result = regex.exec(text)) !== null) {
+                console.info(result);
+            }
+        }
+        {
+            const string = "eko ado eki eka ejo emi elo eke eko eko";
+
+            console.info(string.match(/ek[aiueo]/ig));
+            console.info(string.search(/ek[aiueo]/ig));
+
+            // di replace semua karena regex
+            console.info(string.replace(/ek[aiueo]/i, "keren"));
+            console.info(string.replaceAll(/ek[aiueo]/ig, "keren"));
+            console.info(string.split(/e/ig));
+        }
+        </script>
+    </body>
+</html> 

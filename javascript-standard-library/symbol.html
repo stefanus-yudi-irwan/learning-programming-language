@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Symbol</title>
+    </head>
+    <body>
+        <script>
+             const firstName = Symbol("firstName");
+             const lastName = Symbol("lastName");
+
+             const person = {};
+             person[firstName] = "Yudi";
+             person[lastName] = "Irwan";
+
+             console.info(person);
+             console.info(person[firstName]);
+             console.info(person[lastName]); 
+
+
+             const person2 = {};
+             person2[Symbol.for("firstName")] = "Yudi";
+             person2[Symbol.for("lastName")] = "Irwan";
+
+             console.info(person2);
+             console.info(person2[Symbol.for("firstName")]);
+             console.info(person2[Symbol.for("lastName")]);
+        </script>
+    </body>
+</html> 
