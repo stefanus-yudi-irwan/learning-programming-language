@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Private  Class Field</title>
+    </head>
+    <body>
+        <script>
+            
+            class Counter {
+                #counter = 0
+                
+                // method ini bisa diakses di luar
+                increment() { 
+                    // tapi yang ini tidak bisa diakses ke luar
+                    this.#counter++; 
+                }
+
+                decrement() {
+                    this.#counter--;
+                }
+
+                get() {
+                    return this.#counter;
+                }
+            }
+
+            const counter = new Counter();
+            counter.increment();
+            counter.increment();
+            counter.increment();
+            counter.increment();
+            counter.increment();
+            
+            console.info(counter.get());
+            console.info(counter);
+
+            // error private field tidak bisa diakses di luar
+            //counter.#counter = 100; 
+
+        </script>
+    </body>
+</html>
