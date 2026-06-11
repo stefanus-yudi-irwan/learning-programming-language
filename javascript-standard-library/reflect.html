@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reflect</title>
+    </head>
+    <body>
+        <script>
+            const person = {};
+
+            Reflect.set(person, 'firstName', 'Yudi');
+            Reflect.set(person, 'lastName', 'Irwan');
+
+            console.info(person);
+
+            console.info(Reflect.has(person, 'firstName'));
+            console.info(Reflect.has(person, 'middleName'));
+        </script>
+    </body>
+</html> 
