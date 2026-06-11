@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Attribute</title>
+    </head>
+    <body>
+        <img id="logo" src="https://www.programmerzamannow.com/_app/immutable/assets/logo-pzn.DBHQYbA6.png" alt="PZN logo">
+        <script>
+            const logo = document.getElementById("logo");
+            const src = logo.getAttributeNode("src");
+
+            console.info(src.name);
+            console.info(src.value);
+
+            const src2 = logo.getAttribute("src");
+
+            console.info(src2);
+        </script>
+    </body>
+</html>
