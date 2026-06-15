@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Event Handler</title>
+    </head>
+    <body>
+        <input id="clickMe" type="button" value="Click Me!"/>
+        <script>
+            const clickMe = document.getElementById("clickMe");
+            clickMe.addEventListener("click", function() {
+                clickMe.setAttribute("value", "You Already Click Me!");
+            })
+            clickMe.addEventListener("click", function() {
+                console.log("Button di Click");
+            })
+        </script>
+    </body>
+</html>

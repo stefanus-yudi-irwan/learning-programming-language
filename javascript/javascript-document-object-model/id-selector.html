@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ID Selector</title>
+    </head>
+    <body>
+        <ul>
+            <li class="menuItem">1</li>
+            <li id="menu2">2</li>
+            <li class="menuItem">3</li>
+        </ul>
+        <script>
+            const elements = document.querySelectorAll("#menu2");
+            console.info(elements);
+        </script>
+    </body>
+</html>
