@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Attribute Selector</title>
+    </head>
+    <body>
+        <div class="Stefanus"></div>
+        <div class="Yudi"></div>
+        <div class="Irwan"></div>
+        <script>
+            const elements = document.querySelectorAll("[class]");
+            console.info(elements);
+
+            const elements2 = document.querySelectorAll("div[class^='Stefanus']");
+            console.info(elements2)
+        </script>
+    </body>
+</html>
