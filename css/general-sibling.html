@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Sibling Selector</title>
+    <style>
+        div ~ p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Ini Contoh</p>
+    <div>
+        <article>
+            <p>Ini Tidak Dipilih</p>
+        </article>
+        <p>Ini Tidak Dipilih</p>
+    </div>
+    <p>Ini Dipilih</p>
+    <p>Ini Dipilih</p>
+</body>
+</html>
