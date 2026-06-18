@@ -4,3 +4,5 @@ belajar-reactjs-dasar/*
 .vscode/*
 react-js/belajar-react-dasar/dist/*
 react-js/belajar-react-dasar/node_modules/*
+*.mp4
+*.mp3
