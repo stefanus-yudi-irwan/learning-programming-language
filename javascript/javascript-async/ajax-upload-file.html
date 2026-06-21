@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Upload File</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form>
+        <label for="username">
+            Username:
+            <input type="text" name="username" id="username"> 
+        </label>
+        <br>
+        <label for="name">
+            Name:
+            <input type="text" name="name" id="name">
+        </label>
+        <br>
+        <label for="profile">
+            Profile:
+            <input type="file" name="profile" id="profile">
+        </label>
+        <br>
+        <input type="button" value="Register" id="register">
+    </form>
+    <h1 id="response"></h1>
+    <script>
+        function doLogin() {
+            const ajax = new XMLHttpRequest();
+            ajax.open("POST", `https://eoila05cdijiqtr.m.pipedream.net`)
+            ajax.onload = function () {
+                const response = document.getElementById("response");
+                response.innerText = ajax.responseText;
+            }
+            
+            const form = new FormData();
+            form.append("username", document.getElementById("username").value);
+            form.append("name", document.getElementById("name").value);
+            form.append("profile", document.getElementById("profile").files.item(0));
+
+            ajax.send(form);
+        }
+
+        document.getElementById("register").onclick = doLogin;
+    </script>
+</body>
+</html>
