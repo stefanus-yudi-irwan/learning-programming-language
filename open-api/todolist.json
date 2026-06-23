@@ -1,0 +1,95 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "TodoList RESTful API",
+        "description": "OpenAPI for TodoList RESTful API",
+        "version": "1",
+        "termsOfService": "https://stefanus-yudi-irwan.github.io",
+        "contact" : {
+            "name": "Stefanus Yudi Irwan",
+            "email": "yudi.stefanus22@gmail.com",
+            "url": "https://stefanus-yudi-irwan.github.io"
+        },
+        "license": {
+            "name": "APACHE 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://{environment}.stefanus-yudi-irwan.github.io/api/v1",
+            "description": "TodoList RESTful API Server",
+            "variables": {
+                "environment": {
+                    "default": "dev",
+                    "description": "Server Environment",
+                    "enum": [
+                        "dev",
+                        "qa",
+                        "prod"
+                    ]
+                }
+            }
+        }
+    ],
+    "externalDocs": {
+        "description": "Youtube Stefanus Yudi Irwan",
+        "url": "https://www.youtube.com/stefanus-yudi-irwan"
+    },
+    "paths": {
+        "/todolist": {
+            "get": {
+                "summary": "Get Add TodoList",
+                "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
+                "responses": {},
+                "parameters": [
+                    {
+                        "name": "include_done",
+                        "description": "Include done todolist in the result",
+                        "required": false,
+                        "in": "query"
+                    },
+                    {
+                        "name": "name",
+                        "description": "Search todolist by name",
+                        "required": false,
+                        "in": "query"       
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create new Todolist",
+                "description": "Create new active todolist",
+                "responses": {}
+            }
+        },
+        "/todolist/{todolistId}": {
+            "put": {
+                "summary": "Update existing todolist",
+                "description": "Update existing todolist",
+                "responses": {},
+                "parameters": [
+                    {
+                        "name": "todolistId",
+                        "description": "Todolist Id for update",
+                        "in": "path",
+                        "required": true
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete existing todolist",
+                "description": "Delete existing todolist",
+                "responses": {},
+                "parameters": [
+                    {
+                        "name": "todolistId",
+                        "description": "Todolist Id for delete",
+                        "in": "path",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    }
+}
