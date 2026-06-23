@@ -1,3 +1,7 @@
 belajar-html-dasar/*
 belajar-javascript-dasar/*
 belajar-reactjs-dasar/*
+*.pdf
+*.mp3
+*.mp4
+react-js/belajar-react-dasar/node_modules/*
