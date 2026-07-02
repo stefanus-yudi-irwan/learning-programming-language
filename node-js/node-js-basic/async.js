@@ -2,5 +2,9 @@ function samplePromise() {
     return Promise.resolve("Yudi");
 }
 
-const name = await samplePromise();
-console.info(name);
+async function run() {
+    const name = await samplePromise();
+    console.info(name);
+}
+
+run();
