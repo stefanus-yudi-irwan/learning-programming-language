@@ -1,0 +1,18 @@
+{
+  "name": "basic-vitest",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^4.1.9",
+    "@vitest/ui": "^4.1.9",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.1",
+    "vitest": "^4.1.9"
+  }
+}
