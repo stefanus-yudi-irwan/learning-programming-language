@@ -1,0 +1,20 @@
+{
+  "name": "vite",
+  "version": "1.0.0",
+  "description": "belajar-vite",
+  "license": "ISC",
+  "author": "Stefanus Yudi Irwan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.3"
+  },
+  "dependencies": {
+    "uuid": "^14.0.1"
+  }
+}
