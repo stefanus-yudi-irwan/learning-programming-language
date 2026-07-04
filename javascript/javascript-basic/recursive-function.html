@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Recursive Function</title>
+    </head>
+    <body>
+        <script>
+
+            const number = 10;
+
+            function factorial(value) {
+                let result = 1;
+                for (let i = 1; i <= value; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+
+            document.writeln(`<p>Factorial of ${number} is ${factorial(number)}</p>`);
+
+            function factorialRecursive(value) {
+                if (value === 1 || value === 0) {
+                    return 1;
+                } else {
+                    return value*factorialRecursive(value-1);
+                }
+            }
+
+            document.writeln(`<p>Factorial of ${number} is ${factorialRecursive(number)}</p>`);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Basis</title>
+        <style>
+            .container {
+                display: flex;
+            }
+            .content {
+                background-color: aqua;
+                border: 2px solid blue;
+                padding: 5px;
+                margin: 5px;
+            }
+            .content1 {
+                flex-basis: 300px;
+                flex-shrink: 0;
+            }
+            .content2 {
+                flex-basis: 300px;
+                flex-shrink: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content content1">A</div>
+            <div class="content content2">B</div>
+            <div class="content content3">C</div>
+        </div>
+    </body>
+</html>

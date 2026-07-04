@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Node</title>
+    </head>
+    <body>
+        <ul id="menu">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+        <script>
+
+            const menu = document.getElementById("menu");
+            console.info(menu);
+            console.info(menu.childNodes);
+
+            const second = document.getElementById("second");
+            console.info(second);
+            console.info(second.textContent);
+            console.info(second.previousSibling.previousSibling);
+            console.info(second.nextSibling.nextSibling);
+
+            const menu2 = document.getElementById("menu");
+            menu2.removeChild(document.getElementById("first"));
+            menu2.removeChild(document.getElementById("second"));
+            menu2.removeChild(document.getElementById("third"));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Object Data Type</title>
+    </head>
+    <body>
+        <script>
+            const person = {};
+
+            // Add or Changes
+            person["nama"] = "Stefanus Yudi Irwan";
+            person["alamat"] = "Indonesia";
+            person["umur"] = 30;
+
+            console.table(person)
+
+            // Menghapus
+            delete person["umur"];
+
+            console.table(person);
+
+            const orang = {
+                "nama ujang": "Stefanus Yudi Irwan",
+                alamat: "Indonesia",
+                umur: 30
+            };
+            console.table(orang);
+
+            console.info(`Nama: ${orang["nama ujang"]}`);
+            console.info(`Alamat: ${orang.alamat}`);
+            console.info(`Umur: ${orang.umur}`)
+
+        </script>
+    </body>
+</html>

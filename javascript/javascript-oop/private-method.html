@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Private  Method</title>
+    </head>
+    <body>
+        <script>
+
+            class Person {
+                
+                // ouside access
+                say (name) {
+                    if (name) {
+                        this.#sayWithName(name);
+                    } else {
+                        this.#sayWithoutName();
+                    }
+                }
+
+                // internal access only
+                #sayWithoutName() {
+                    console.info('Hello');
+                }
+
+                #sayWithName(name){
+                    console.info(`Hello ${name}`)
+                }
+            }
+
+            const yudi = new Person();
+            yudi.say("Budi");
+            // yudi.#sayWithoutName(); error accessing private method
+
+        </script>
+    </body>
+</html>

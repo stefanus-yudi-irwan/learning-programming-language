@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Function Generator</title>
+    </head>
+    <body>
+        <script>
+            function* createNames() {
+                yield "Stefanus";
+                yield "Yudi";
+                yield "Irwan";
+            }
+
+            console.info(createNames());
+
+            const names = createNames();
+            for (const name of names) {
+                console.log(name);
+            }
+
+            // lazy
+            function* buatGanjil(value) {
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 === 1) {
+                        console.info(`Yield ${i}`);
+                        yield i;
+                    }
+                }
+            }
+
+            console.info(buatGanjil(10))
+
+            const angkaGanjil = buatGanjil(10);
+            for (const angka of angkaGanjil) {
+                console.info(angka);
+            }
+
+            const angkaGanjil2 = buatGanjil(20);
+            console.info(angkaGanjil2.next().value);
+            console.info(angkaGanjil2.next().value);
+            console.info(angkaGanjil2.next().value);
+
+
+            // eager
+            function buatGanjilArray(value) {
+                const result = [];
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 === 1){
+                        console.info(`Yield ${i}`);
+                        result.push(i);
+                    }
+                }
+                return result;
+            }
+
+            const numbers = buatGanjilArray(10);
+            for (const number of numbers) {
+                console.info(number);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Module Object</title>
+    </head>
+    <body>
+        <script type="module">
+            import * as yudi from "./scripts/module-object.js";
+            
+            console.info(yudi.firstName);
+            console.info(yudi.middleName);
+            console.info(yudi.lastName);
+            
+            yudi.hello();
+
+            const person = new yudi.Person();
+            console.info(person);
+        </script>
+    </body>
+</html>

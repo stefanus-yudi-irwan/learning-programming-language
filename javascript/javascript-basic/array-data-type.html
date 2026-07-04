@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Array Data Type</title>
+    </head>
+    <body>
+        <script>
+            let arrayKosong = [];
+            let arrayNama = ["Stefanus", "Yudi", "Irwan"];
+
+            const names = [];
+            names.push("Stefanus");
+            names.push("Yudi", "Irwan");
+            names.push("Budi", "Joko", "Rudi");
+
+            console.table(names);
+
+            console.info(names[0]);
+            console.info(names[1]);
+            console.info(names[2]);
+
+            names[0] = "Setiono";
+            names[1] = "Kucay";
+            names[2] = "Cipow";
+            console.table(names);
+            console.info(names.length);
+
+            delete names[3];
+            console.table(names);
+            names.push("Saya Lagi")
+            console.table(names)
+
+            names[3] = "Diubah lagi";
+            names.push(1,2,3,4,5);
+            names.push(["Stefanus", "Yudi", "Irwan"])
+            console.table(names);
+        </script>
+    </body>
+</html>

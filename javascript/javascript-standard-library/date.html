@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Date</title>
+    </head>
+    <body>
+        <script>
+
+             const date1 = new Date();
+             console.info(date1);
+
+             const date2 = new Date(2020, 10, 10);
+             console.info(date2);
+
+             const date3 = new Date(2020, 10, 10, 16, 15, 9, 123);
+             console.info(date3);
+
+             const date4 = new Date(1781076374055);
+             console.info(date4);
+
+             const timestamp = Date.now();
+             console.info(timestamp);
+
+             const dateUnix = new Date(timestamp);
+             console.info(dateUnix);
+
+             console.info(dateUnix.getTime())
+
+             const parseTimestamp = Date.parse("2020-12-18T10:10:10.123+07:00")
+             console.info(parseTimestamp);
+
+             const parseDate = new Date(parseTimestamp);
+             console.info(parseDate);
+
+             const date = new Date();
+             date.setFullYear(2020);
+
+             console.info(date.getFullYear());
+             console.info(date.getMonth());
+             console.info(date.getDate());
+             console.info(date.getHours());
+             console.info(date.getMinutes());
+             console.info(date.getSeconds());
+             console.info(date.getMilliseconds());
+             console.info(date.getTimezoneOffset());
+
+        </script>
+    </body>
+</html>

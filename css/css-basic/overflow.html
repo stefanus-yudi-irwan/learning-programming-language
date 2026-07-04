@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        div {
+            margin: 0px;
+            background-color: lightblue;
+            padding: 0px;
+        }
+        p {
+            margin: 0px;
+            padding: 0px;
+            text-align: justify;
+        }
+        .artikel1 {
+            height: 200px;
+            background-color: lightblue;
+            width: 200px;
+            padding: 10px 20px 10px 20px;
+            margin: 10px;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px 0px 10px 0px;
+            overflow: auto;
+        }
+        .artikel2 {
+            height: 150px;
+            width: 300px;
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 20px;
+            border-left-style: solid;
+            border-left-width: 2px;
+            border-right-style: solid;
+            border-right-width: 2px;
+            border-radius: 10px 0px 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="artikel1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+        </p>
+    </div>
+    <div class="artikel2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta view="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+        <style>
+            table, tr, th, td {
+                border-style: solid;
+                border-width: 2px;
+                margin: 0px;
+                padding: 0px;
+                border-collapse: collapse;
+            }
+
+            th {
+                text-align: left;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            tr:hover{
+                background-color: pink;
+            }
+
+            .ganjil {
+                background-color: orange;
+            }
+
+            .genap {
+                background-color: blue;
+            }
+
+            table {
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Nilai</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ganjil">
+                    <td>Yudi</td>
+                    <td>100</td>
+                </tr>
+                <tr class="genap">
+                    <td>Yudi</td>
+                    <td>100</td>
+                </tr>
+                <tr class="ganjil">
+                    <td>Yudi</td>
+                    <td>100</td>
+                </tr>
+                <tr class="genap">
+                    <td>Yudi</td>
+                    <td>100</td>
+                </tr>
+                <tr class="ganjil">
+                    <td>Yudi</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

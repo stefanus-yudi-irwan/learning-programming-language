@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Proxy</title>
+    </head>
+    <body>
+        <script>
+            const target = {
+                middleName: "Irwan"
+            };
+
+            const handler = {
+                get: function (target, property) {
+                    console.info(`Access property ${property}`);
+                    return target[property];
+                },
+                set: function (target, property, value) {
+                    console.info(`Change property ${property} : ${value}`);
+                    if (value === null) {
+                        throw new Error("Tidak boleh null")
+                    } else {
+                        target[property] = value;
+                    }
+                }
+            }
+
+            const proxy = new Proxy(target, handler);
+            proxy.firstName = "Stefanus";
+            proxy.lastName = null;
+
+            console.info(proxy.firstName);
+            console.info(proxy.lastName);
+            console.info(target);
+            console.info(proxy.middleName);
+        </script>
+    </body>
+</html> 

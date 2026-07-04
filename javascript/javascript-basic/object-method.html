@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Closure</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                name: "Yudi",
+                sayHello: function (name) {
+                    alert(`Hello ${name}`);
+                }
+            };
+
+            person.sayHello("Stefanus")
+
+            const secondPerson = {
+                name: "Irwan"
+            };
+
+            secondPerson.sayHello = function (name) {
+                alert(`Hello ${name}`);
+            }
+
+            secondPerson.sayHello("Yudi");
+        </script>
+    </body>
+</html>

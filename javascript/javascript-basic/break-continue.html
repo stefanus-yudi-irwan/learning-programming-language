@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Break Continue</title>
+    </head>
+    <body>
+        <script>
+            let counter = 1;
+            while (true) {
+                document.writeln(`<p>Perulangan ke ${counter}</p>`);
+                counter++;
+
+                if (counter > 10) {
+                    break;
+                }
+            }
+
+            for (let i = 1; i <= 50; i++) {
+                if (i % 2 === 0) {
+                    continue;
+                }
+                document.writeln(`<p>Perulangan Ganjil ${i}</p>`)
+            }
+        </script>
+    </body>
+</html>

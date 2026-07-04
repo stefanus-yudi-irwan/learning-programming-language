@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>String Conversion</title>
+    </head>
+    <body>
+        <script>
+            const value1 = parseInt("1");
+            const value2 = 1;
+            const sum = value1 + value2;
+
+            document.writeln(`<p>${sum}</p>`);
+            document.writeln(`<p>${parseInt("1.9")}</p>`);
+            document.writeln(`<p>${parseFloat("1.1")}</p>`);
+            document.writeln(`<p>${Number("1.1")}</p>`);
+
+            const a = 1;
+            const b = 1;
+            const total = a.toString() + b.toString();
+            document.writeln(`<p>${total}</p>`)
+
+            document.writeln(`<p>${parseInt("salah")}</p>`)
+            document.writeln(`<p>${parseFloat("1.1text")}</p>`)
+
+            // Number() tidak akan mentolerir kesalahan pada data
+            document.writeln(`<p>${Number("1.1ups")}</p>`)
+            document.writeln(`<p>${Number("1x")}</p>`)
+            document.writeln(`<p>${Number("bukan number")}</p>`)
+
+            const value3 = Number("Salah");
+            const value4 = 100;
+            const sum2 = value3 + value4;
+
+            document.writeln(`<p>Ini hasil sum2: ${sum2}</p>`);
+
+            document.writeln(`<p>${isNaN(sum2)}</p>`)
+            document.writeln(`<p>${isNaN(100)}</p>`)
+
+        </script>
+    </body>
+</html>

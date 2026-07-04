@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Undefined</title>
+    </head>
+    <body>
+        <script>
+            // variable yang belum ada isinya undefined
+            let name;
+            if (name === undefined) {
+                console.info("UNDEFINED");
+            } else {
+                console.info("DEFINED");
+            }
+
+            const names = ["Stefanus", "Yudi", "Irwan"];
+            if (names[2] === undefined){
+                console.info("ARRAY UNDEFINED");
+            } else {
+                console.info("ARRAY DEFINED");
+            }
+
+            let person = {
+                name: "Yudi"
+            };
+            if (person.name == undefined) {
+                console.info("Person Name Undefined");
+            } else {
+                console.info(`Hello ${person.name}`);
+            }
+        </script>
+    </body>
+</html>

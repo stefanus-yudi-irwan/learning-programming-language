@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Instance Of Operator</title>
+    </head>
+    <body>
+        <script>
+
+            {
+                class Employee {};
+                class Manager {};
+
+                const budi = new Employee();
+                const yudi = new Manager();
+
+                console.info(typeof budi);
+                console.info(typeof yudi);
+
+                console.info(budi instanceof Employee);
+                console.info(budi instanceof Manager);
+                console.info(yudi instanceof Employee);
+                console.info(yudi instanceof Manager);
+            }
+
+            {
+                class Employee {};
+                class Manager extends Employee {};
+
+                const budi = new Employee();
+                const yudi = new Manager();
+
+                console.info(typeof budi);
+                console.info(typeof yudi);
+
+                console.info(budi instanceof Employee);
+                console.info(budi instanceof Manager);
+                console.info(yudi instanceof Employee);
+                console.info(yudi instanceof Manager);
+            }
+
+        </script>
+    </body>
+</html>

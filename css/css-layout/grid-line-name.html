@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Line Name</title>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: [cline1] 100px [cline2] auto [cline3] 100px [cline4];
+                grid-template-rows: [rline1] 50px [rline2] auto [rline3] 100px [rline4];
+            }
+            .header {
+                background-color: aqua;
+                grid-column-start: cline1;
+                grid-column-end: cline4;
+                grid-row-start: rline1;
+                grid-row-end: rline2;
+            }
+            .content {
+                background-color: bisque;
+                grid-area: content;
+                grid-column-start: cline2;
+                grid-column-end: cline3;
+                grid-row-start: rline2;
+                grid-row-end: rline3;
+                margin: 10px;
+                padding: 10px; 
+            }
+            .footer {
+                background-color: aqua;
+                grid-column-start: cline1;
+                grid-column-end: cline4;
+                grid-row-start: rline3;
+                grid-row-end: rline4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+           <div class="header">
+                Selamat Datang di Web Stefanus Yudi Irwan
+            </div>
+           <div class="content">
+                <h1>Stefanus Yudi Irwan</h1>
+                <p>Bootstrap 5 is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a :root level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.</p>
+                <p>Bootstrap 5 is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a :root level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.</p>
+            </div>
+           <div class="footer">
+                Develop with Love by Stefanus Yudi Irwan
+            </div>
+    </body>
+</html>

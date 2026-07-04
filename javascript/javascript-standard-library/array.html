@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Array</title>
+    </head>
+    <body>
+        <script>
+
+        {
+            const array = ["Stefanus", "Yudi", "Irwan"];
+
+            // for Each instance method
+            array.forEach(function (value, index) {
+                console.info(`${index} : ${value}`);
+            })
+            array.forEach((value, index) => console.info(`${index} : ${value}`));
+            array.forEach(value => console.info(value));
+        }
+
+        {
+            const queue = [];
+
+            queue.push("Udin");
+            queue.push("Padang");
+            queue.push("Merdeka");
+
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue.shift()); //undefined
+        }
+
+        {
+            const stack = [];
+
+            stack.push("Udin");
+            stack.push("Padang");
+            stack.push("Merdeka");
+
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack.pop()); //undefined
+        }
+
+        {
+            const source = [1,2,3,4,5,1,2,3,4,5];
+
+            // find value dimana valuenya lebih dari 3
+            console.info(source.find(value => value > 3));
+
+            // find index dimana valuenya lebih dari 3
+            console.info(source.findIndex(value => value > 3));
+
+            console.info(source.includes(7));
+            console.info(source.indexOf(5));
+            console.info(source.lastIndexOf(5));
+        }
+
+        {
+            const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+            console.info(numbers)
+            console.info(numbers.filter(value => value % 2 === 1))
+            console.info(numbers.filter(value => value % 2 === 0))
+        }
+
+        {
+            const  names = "Stefanus Yudi Irwan".split(" ");
+            console.info(names.map(value => value.toUpperCase()));
+
+            const namesReduce = names.reduce((before, value) => before + " " + value);
+            console.info(namesReduce);
+
+            const namesRight = names.reduceRight((before, value) => before + " " + value);
+            console.info(namesRight);
+
+            const numbers = [1,2,3,4,5,6,7,8,9,10];
+            console.info(numbers.reduce((result, value) => result + value));
+            console.info(numbers.reduceRight((result, value) => result + value));
+        }
+
+
+        </script>
+    </body>
+</html>

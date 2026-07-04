@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Var Variable Problem</title>
+    </head>
+    <body>
+        <script>
+
+            // global scope
+            let i = 20;
+
+            for (let i = 0; i < 10; i++) {
+                // local scope
+                console.log(`Local: ${i}`);
+            }
+
+            console.info(`Global : ${i}`);
+
+            var j = 20;
+
+            for (var j = 0; j < 10; j++) {
+                // local scope
+                console.log(`Local: ${j}`);
+            }
+
+            console.info(`Global : ${j}`);
+
+        </script>
+    </body>
+</html>
