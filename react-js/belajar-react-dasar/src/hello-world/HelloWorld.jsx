@@ -14,7 +14,11 @@ function HelloWorld() {
 
 function HeaderHelloWorld({text = "Ups, lupa kasih text!"}) {
     return (
-        <h1 className="title">{text.toUpperCase()}</h1>
+        <h1 className="title"
+            style = {{
+                color: "red",
+                backgroundColor: "aqua"
+            }}>{text.toUpperCase()}</h1>
     );
 }
 

@@ -1,6 +1,4 @@
-belajar-html-dasar/*
-belajar-javascript-dasar/*
-belajar-reactjs-dasar/*
 *.pdf
 *.mp4
 *.mp3
+**/node_modules/
