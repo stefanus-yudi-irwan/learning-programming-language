@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useImmer } from "use-immer";
 
-function TaskForm({onSubmit}){
+function TaskForm({setItems}){
     const [item, setItem] = useState("");
 
     function handleChange(e) {
@@ -10,7 +10,9 @@ function TaskForm({onSubmit}){
 
     function handleClick(e) {
         e.preventDefault();
-        onSubmit(item);
+        setItems((draft) => {
+            draft.push(item);
+        })
         setItem("");
     }
 
